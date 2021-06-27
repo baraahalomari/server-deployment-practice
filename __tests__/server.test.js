@@ -1,10 +1,14 @@
-xtest('adds 1 + 2 to equal 3', () => {
-  expect(1 + 2).toBe(3);
-});
 ('use strict');
 const supertest = require('supertest');
 const server = require('../server');
 const request = supertest(server.app);
+
+
+xtest('adds 1 + 2 to equal 3', () => {
+  expect(1 + 2).toBe(3);
+});
+
+
 
 describe('API Server', () => {
   it('handles invalid requests', async () => {
